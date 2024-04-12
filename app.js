@@ -48,6 +48,12 @@ app.post('/dj-response/:index', (req, res) => {
     res.json({ message: "Respuesta del DJ recibida" });
 });
 
+// Ruta de inicio para el DJ
+app.get('/dj.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dj.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor iniciado en http://localhost:${PORT}`);
 });
+
